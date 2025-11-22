@@ -9,4 +9,6 @@ dependencies:
   - samtools
   - bwa
   - bcftools
+  - fastqc
+  - multiqc
 

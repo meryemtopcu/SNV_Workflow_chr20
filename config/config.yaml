@@ -1,0 +1,11 @@
+samples:
+  - NA12878
+
+paths:
+  raw: "data/raw"
+  ref: "data/ref"
+  results: "results"
+
+reference:
+  fasta: "data/ref/chr20.fa"
+
