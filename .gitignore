@@ -1,0 +1,18 @@
+# Word/excel files ignore
+*.docx
+*.doc
+*.rtf
+*.xltx
+
+# Big / generated stuff
+data/
+results/
+logs/
+.snakemake/
+
+# Mac çöp dosyaları
+*.DS_Store
+
+# Fastq atıkları (root'a düşenler)
+NA12878.fastq
+NA12878.fastq.gz

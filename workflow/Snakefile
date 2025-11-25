@@ -3,10 +3,15 @@ configfile: "config/config.yaml"
 SAMPLES = config["samples"]
 RAW_DIR = config["paths"]["raw"]
 RESULTS_DIR = config["paths"]["results"]
+REF = config["reference"]["fasta"]
+BWA_INDEX = [REF + "." + ext for ext in ["amb", "ann", "bwt", "pac", "sa"]]
+
 
 rule all:
     input:
-        expand(f"{RESULTS_DIR}/qc/{{sample}}_fastqc.html", sample=SAMPLES)
+        expand(f"{RESULTS_DIR}/qc/{{sample}}_fastqc.html", sample=SAMPLES),
+        expand(f"{RESULTS_DIR}/mapping/{{sample}}.sorted.bam.bai", sample=SAMPLES),
+        expand(f"{RESULTS_DIR}/variants/{{sample}}.vcf.gz", sample=SAMPLES)
 
 include: "rules/qc.smk"
 include: "rules/mapping.smk"
