@@ -1,3 +1,4 @@
+
 # Word/excel files ignore
 *.docx
 *.doc
@@ -5,14 +6,17 @@
 *.xltx
 
 # Big / generated stuff
+study_files/
 data/
-results/
 logs/
 .snakemake/
+deliverables/
+results/mapping/
 
 # Mac çöp dosyaları
 *.DS_Store
-
+*.DS_Store
+~$*.pptx
 # Fastq atıkları (root'a düşenler)
 NA12878.fastq
 NA12878.fastq.gz
